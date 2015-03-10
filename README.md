@@ -1,5 +1,5 @@
 #Queryable Swift
-## NSManagedObjectContext+Queryable.swift a Swift port based in martydill's [ios-queryable](https://github.com/martydill/ios-queryable) project
+## NSManagedObjectContext+Queryable.swift is a Swift port based in martydill's [ios-queryable](https://github.com/martydill/ios-queryable) project
 
 Basically it let's you get rid of Core Data immense boilerplate code.
 
@@ -10,7 +10,7 @@ Feel free to use, re-use and improve it!
 #Example
 Queryable lets you write code like this:
 ```swift
-self.managedObjectContext.ofType("Category").whereConditions(["name like '\*n\*'"]).orderBy("name", ascending: true).fetch(5).toArray()
+self.managedObjectContext.ofType("Category").whereConditions(["name like '*n*'"]).orderBy("name", ascending: true).fetch(5).toArray()
 ```
 
 instead of like this:
@@ -20,7 +20,7 @@ let entityDescription = NSEntityDescription.entityForName("Category", inManagedO
 let fetchRequest = NSFetchRequest()
 fetchRequest.entity = entityDescription
 
-fetchRequest.predicate = NSPredicate(format: "name like '\*n\*'")
+fetchRequest.predicate = NSPredicate(format: "name like '*n*'")
 
 var descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
 request.sortDescriptors = [descriptor]
